@@ -44,6 +44,7 @@ public class Galgelegkonsol {
         }
         else
             System.out.println("Du tabte noob!");
+        System.out.println("det rigtige ord var " + k.getOrdet());
         
     }
     
