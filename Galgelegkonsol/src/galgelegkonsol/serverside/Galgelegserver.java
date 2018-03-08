@@ -17,10 +17,10 @@ public class Galgelegserver {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        		System.out.println("publicerer kontotjeneste");
-		GalgelogikI k = new GalgelogikImpl();
-    // Ipv6-addressen [::] svarer til Ipv4-adressen 0.0.0.0, der matcher alle maskinens netkort og 
-		Endpoint.publish("http://[::]:9901/kontotjeneste", k);
-		System.out.println("Galgeleg server er startet.");
-	}
+        System.out.println("publicerer kontotjeneste");
+        GalgelogikI k = new GalgelogikImpl();
+        // Ipv6-addressen [::] svarer til Ipv4-adressen 0.0.0.0, der matcher alle maskinens netkort og 
+        Endpoint.publish("http://[::]:9901/kontotjeneste", k);
+        System.out.println("Galgeleg server er startet.");
     }
+}

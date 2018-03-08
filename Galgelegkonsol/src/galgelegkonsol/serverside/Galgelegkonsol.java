@@ -33,20 +33,19 @@ public class Galgelegkonsol {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        
-        while(!k.erSpilletSlut()){
+
+        while (!k.erSpilletSlut()) {
             System.out.println("Det synlige ord er: " + k.getSynligtOrd() + "\nDu har antal forkerte: " + k.getAntalForkerteBogstaver() + "\nGæt ved at skrive i konsollen.");
             k.gætBogstav(keyboard.nextLine());
         }
 
         if (k.erSpilletVundet()) {
             System.out.println("Du vandt!");
-        }
-        else
+        } else {
             System.out.println("Du tabte noob!");
+        }
         System.out.println("det rigtige ord var " + k.getOrdet());
-        
+
     }
-    
 
 }
