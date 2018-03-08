@@ -16,7 +16,7 @@ import java.util.Random;
 import javax.jws.WebService;
 
 @WebService(endpointInterface = "galgelegkonsol.serverside.GalgelogikI")
-public class GalgelogikImpl{
+public class GalgelogikImpl implements GalgelogikI {
   /** AHT afprøvning er muligeOrd synlig på pakkeniveau */
   ArrayList<String> muligeOrd = new ArrayList<String>();
   private String ordet;
