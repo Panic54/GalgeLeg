@@ -12,18 +12,37 @@
 
 
 	<form>
-		username:<br> <input type="text" name="username"><br>
-		password:<br> <input type="password" name="password"><br>
+		username:<br> <input type="text" id="username"><br>
+		password:<br> <input type="password" id="password"><br>
 		<br>
 		<button id="loginBtn" type="button">Login</button>
 	</form>
 
 	<script>
+	
+		var username;
+		var password;
+	
 			$(document).ready(function(){
 				
 				$("#LoginBtn").on("Click",function(){
 					
-					$.ajax
+					username = $("#username").val();
+					password = $("#password").val();
+					
+					$.ajax({
+						
+						type		: 	"GET",
+						url			: 	"Unknown",
+						dataType	: 	"json",
+					    //contentType	: 	"application/json; charset=utf-8",
+						//data		: 	{"password":password, "username":username},
+						username	:	username,
+						password	:	password
+						success		:	("")
+						
+						
+					})
 					
 				})
 				
