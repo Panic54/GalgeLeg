@@ -10,18 +10,22 @@
 </head>
 <body>
 
-
+	<h1>Galgeleg</h1>
+	<p id="headpara"> Please write user information </p>
+	
 	<form>
 		username:<br> <input type="text" id="username"><br>
 		password:<br> <input type="password" id="password"><br>
 		<br>
 		<button id="loginBtn" type="button">Login</button>
 	</form>
+	
+	<br><p id="response"></p>
 
 	<script>
 	
-		var username;
-		var password;
+		//var username;
+		//var password;
 	
 			$(document).ready(function(){
 				
@@ -32,14 +36,20 @@
 					
 					$.ajax({
 						
-						type		: 	"GET",
+						type		: 	"POST",
 						url			: 	"Unknown",
-						dataType	: 	"json",
-					    //contentType	: 	"application/json; charset=utf-8",
+					    contentType	: 	"boolean",
 						//data		: 	{"password":password, "username":username},
 						username	:	username,
-						password	:	password
-						success		:	("")
+						password	:	password,
+						success		:	function(result){
+							
+							if(result === true){
+								location.href = "next_page";
+							} else 
+								$("#response").text("User not found");
+							
+						}
 						
 						
 					})
