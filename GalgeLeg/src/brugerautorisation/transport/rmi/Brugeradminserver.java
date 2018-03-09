@@ -15,6 +15,7 @@ public class Brugeradminserver
 		System.out.println("Brugeradmin publiceret over RMI");
 	}
 }
+
 /* Overfør til server med f.eks.:
 
 cd /home/j/DistribueredeSystemer/DistribueredeSystemer/
