@@ -22,7 +22,7 @@ public class Galgelegkonsol {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws MalformedURLException {
-        URL url = new URL("http://localhost:9901/kontotjeneste?wsdl");
+        URL url = new URL("http://localhost:9901/galgejeneste?wsdl");
         QName qname = new QName("http://serverside.galgelegkonsol/", "GalgelogikImplService");
         Service service = Service.create(url, qname);
         GalgelogikI k = service.getPort(GalgelogikI.class);
