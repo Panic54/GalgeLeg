@@ -5,7 +5,6 @@
  */
 package galgelegkonsol.serverside;
 
-import galgelegkonsol.serverside.GalgelogikI;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Scanner;
