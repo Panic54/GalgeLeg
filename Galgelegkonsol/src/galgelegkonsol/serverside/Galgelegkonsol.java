@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package galgelegkonsol.serverside;
 
 import java.net.MalformedURLException;
@@ -12,13 +7,13 @@ import javax.xml.namespace.QName;
 import javax.xml.ws.Service;
 
 /**
- *
  * @author Morten
  */
 public class Galgelegkonsol {
 
     /**
      * @param args the command line arguments
+     * @throws java.net.MalformedURLException
      */
     public static void main(String[] args) throws MalformedURLException {
         URL url = new URL("http://ubuntu4.javabog.dk:11111/galgeleg?wsdl");
