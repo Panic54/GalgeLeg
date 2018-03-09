@@ -20,7 +20,7 @@ public class Galgelegserver {
         System.out.println("publicerer kontotjeneste");
         GalgelogikI k = new GalgelogikImpl();
         // Ipv6-addressen [::] svarer til Ipv4-adressen 0.0.0.0, der matcher alle maskinens netkort og 
-        Endpoint.publish("http://[::]:9901/galgejeneste", k);
+        Endpoint.publish("http://ubuntu4.javabog.dk:11111/galgeleg?wsdl", k);
         System.out.println("Galgeleg server er startet.");
     }
 }
