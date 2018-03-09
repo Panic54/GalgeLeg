@@ -1,7 +1,10 @@
 package game;
 
 public class BenytGalgelogik {
-
+	public BenytGalgelogik(){
+		
+	}
+/*
   public static void main(String[] args) {
 
     Galgelogik spil = new Galgelogik();
@@ -71,4 +74,5 @@ public class BenytGalgelogik {
     spil.logStatus();
     if (spil.erSpilletSlut()) return;
   }
-}
+
+*/}

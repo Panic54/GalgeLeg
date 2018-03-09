@@ -289,7 +289,8 @@ map={img=, name=Ahmad Mohammad Hassan Almajedi, email=s153317@student.dtu.dk s15
 			System.out.println("        forkert kode: '"+adgangskode+"' - korrekt kode er '"+b.adgangskode+"'");
 		}
 		// Forkert adgangskode - vent lidt for at imødegå brute force angreb
-		try { Thread.sleep((int)(Math.random()*1000));	} catch (Exception ex) { }
+		try { Thread.sleep((int)(Math.random()*1000));	} catch (Exception ex) {}
 		throw new IllegalArgumentException("Forkert brugernavn eller adgangskode for "+brugernavn);
+		
 	}
 }

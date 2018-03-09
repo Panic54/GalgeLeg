@@ -10,7 +10,7 @@ public class Brugeradminserver
 		System.out.println("Publicerer Brugeradmin over RMI");
 		BrugeradminImpl impl = new BrugeradminImpl();
 		//impl.db = db;
-		java.rmi.registry.LocateRegistry.createRegistry(1099); // start rmiregistry i server-JVM
+		java.rmi.registry.LocateRegistry.createRegistry(8080); // start rmiregistry i server-JVM
 		Naming.rebind("rmi://localhost/brugeradmin", impl);
 		System.out.println("Brugeradmin publiceret over RMI");
 	}
