@@ -15,7 +15,7 @@ public class TestServer {
 		
 		Brugeradmin k = new BrugeradminImpl();
 		System.setProperty("java.rmi.server.hostname","javabog.dk");
-		Naming.rebind("rmi://localhost/brugeradmin", k);
+		Naming.rebind("rmi://localhost:808080/Gagleleg", k);
 		System.out.println("Tjeneste registeret");
 		
 		
