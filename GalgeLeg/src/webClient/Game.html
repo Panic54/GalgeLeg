@@ -15,26 +15,29 @@
 	<h1>Galgeleg</h1>
 	<img id="galge" src="">
 
+	<h2 id="restekst"></h2>
+
 	<p id="word">Word:</p>
 
 	<form>
 		Guess letter: <br> <input type="text" id="letter"><br>
 		<button id="guess" type="button">Guess</button>
 	</form>
-	
+
 	<p id="usedLetters"></p>
-	
+
 	<script type="text/javascript">
 	
 	$(document).ready(function(){
 		
 		var imgPath = "C:/Users/Gustav Petersen/git/GalgeLeg/GalgeLeg/GRAFIK";
 		var counter = 0;
-		$("#galge").attr("src", imgPath + "/galge.png")
+		var gameover = false;
+		$("#galge").prop("src", imgPath + "/galge.png")
 		
 		$.ajax({
 			
-			type	:	"GET",
+			type	:	"POST",
 			url		:	"Unknown",
 			dataType:	"json",
 			success	:	function(result){
@@ -48,6 +51,13 @@
 		$("#guess").on("Click",function(){
 			
 			var letter = $("#letter").val();
+			
+			if(gameover){
+				
+				gameover = false;
+				window.location.replace("Next_page");
+				
+			}
 			
 			$.ajax({
 				
@@ -66,11 +76,22 @@
 					
 					if(result.status == won){
 						counter = 0;
-						
-						
+						gameover = true;
+						$("#word").text("Word: " + result.word)
+						$("#restekst").text("Du vandt!");
+						$("#guess").prop("value", "Next");
 					}
 					
-					$("#word").text(result.word)
+					if(result.status == lost){
+						counter = 0;
+						gameover = true;
+						$("#restekst").text("Du tabte!");
+						$("guess").prop("value", "Next");
+					}
+					
+					if(result.status == hit){
+						$("#word").text("Word: " + result.word)	
+					}
 					
 				}
 			})
