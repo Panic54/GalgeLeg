@@ -14,60 +14,60 @@ public class BenytGalgelogik {
 		}
 		spil.logStatus();
 
-		spil.gÃ¦tBogstav("e");
+		spil.gætBogstav("e");
 		spil.logStatus();
 
-		spil.gÃ¦tBogstav("a");
+		spil.gætBogstav("a");
 		spil.logStatus();
 		System.out.println("" + spil.getAntalForkerteBogstaver());
 		System.out.println("" + spil.getSynligtOrd());
 		if (spil.erSpilletSlut()) return;
 
-		spil.gÃ¦tBogstav("i");
+		spil.gætBogstav("i");
 		spil.logStatus();
 		if (spil.erSpilletSlut()) return;
 
-		spil.gÃ¦tBogstav("s");
+		spil.gætBogstav("s");
 		spil.logStatus();
 		if (spil.erSpilletSlut()) return;
 
-		spil.gÃ¦tBogstav("r");
+		spil.gætBogstav("r");
 		spil.logStatus();
 		if (spil.erSpilletSlut()) return;
 
-		spil.gÃ¦tBogstav("l");
+		spil.gætBogstav("l");
 		spil.logStatus();
 		if (spil.erSpilletSlut()) return;
 
-		spil.gÃ¦tBogstav("b");
+		spil.gætBogstav("b");
 		spil.logStatus();
 		if (spil.erSpilletSlut()) return;
 
-		spil.gÃ¦tBogstav("o");
+		spil.gætBogstav("o");
 		spil.logStatus();
 		if (spil.erSpilletSlut()) return;
 
-		spil.gÃ¦tBogstav("t");
+		spil.gætBogstav("t");
 		spil.logStatus();
 		if (spil.erSpilletSlut()) return;
 
-		spil.gÃ¦tBogstav("n");
+		spil.gætBogstav("n");
 		spil.logStatus();
 		if (spil.erSpilletSlut()) return;
 
-		spil.gÃ¦tBogstav("m");
+		spil.gætBogstav("m");
 		spil.logStatus();
 		if (spil.erSpilletSlut()) return;
 
-		spil.gÃ¦tBogstav("y");
+		spil.gætBogstav("y");
 		spil.logStatus();
 		if (spil.erSpilletSlut()) return;
 
-		spil.gÃ¦tBogstav("p");
+		spil.gætBogstav("p");
 		spil.logStatus();
 		if (spil.erSpilletSlut()) return;
 
-		spil.gÃ¦tBogstav("g");
+		spil.gætBogstav("g");
 		spil.logStatus();
 		if (spil.erSpilletSlut()) return;
 	}

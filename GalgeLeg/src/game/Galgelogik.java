@@ -92,7 +92,7 @@ public class Galgelogik {
 		}
 	}
 
-	public void gætBogstav(String bogstav) {
+	public void g�tBogstav(String bogstav) {
 		if (bogstav.length() != 1) return;
 		System.out.println("Der gættes på bogstavet: " + bogstav);
 		if (brugteBogstaver.contains(bogstav)) return;
