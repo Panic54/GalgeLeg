@@ -18,7 +18,7 @@ public class Brugeradminklient {
     }
 
    
-    
+    /*
 	public static void main(String[] arg) throws Exception {
 //		Brugeradmin ba =(Brugeradmin) Naming.lookup("rmi://localhost/brugeradmin");
 		
@@ -36,32 +36,33 @@ public class Brugeradminklient {
 		System.out.println("Data: " + Diverse.toString(b));
                 
 		 //ba.sendEmail("154102", "kodeomi6ag", "Hurra det virker!", "Jeg er så glad");
-
                  /*
 		Object ekstraFelt = ba.getEkstraFelt("s123456", "kode1xyz", "hobby");
 		System.out.println("Brugerens hobby er: " + ekstraFelt);
-
-                 
+       
                    //ba.sendGlemtAdgangskodeEmail("s154102", "Dette er en test, husk at skifte kode");
 		//ba.ændrAdgangskode("s154102", "abcd1234", "abc123");
 		ba.setEkstraFelt("s154102", "kodeomi6ag", "Intet", "Fritid"); // Skriv noget andet her
 
 		String webside = (String) ba.getEkstraFelt("s123456", "kode1xyz", "webside");
 		System.out.println("Brugerens webside er: " + webside);
-                 */
-	} 
+                 
+	} */
 
-    /*public boolean login(String navn, String password) {
+    public boolean login(String navn, String password) {
         Bruger b;
 
         try {
             ba = (Brugeradmin) Naming.lookup("rmi://javabog.dk/brugeradmin");
         } catch (NotBoundException ex) {
             Logger.getLogger(Brugeradminklient.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
         } catch (MalformedURLException ex) {
             Logger.getLogger(Brugeradminklient.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
         } catch (RemoteException ex) {
             Logger.getLogger(Brugeradminklient.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
         }
 
         try {
@@ -71,8 +72,9 @@ public class Brugeradminklient {
             System.out.println("Data: " + Diverse.toString(b));
         } catch (RemoteException ex) {
             Logger.getLogger(Brugeradminklient.class.getName()).log(Level.SEVERE, null, ex);
+            return false;
         }
 
         return true;
-    }*/
+    }
 }
